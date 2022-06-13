@@ -98,7 +98,7 @@ function App() {
           className="add-button"
           onClick={() => setNotifications(add(notifications, text, style))}
         >
-          + Stack em up
+          Stacking Up
         </motion.button>
       </motion.main>
       <AnimatePresence
