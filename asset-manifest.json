@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/framer-motion-practice/static/css/main.7ee9770f.css",
+    "main.js": "/framer-motion-practice/static/js/main.96165df9.js",
+    "index.html": "/framer-motion-practice/index.html",
+    "main.7ee9770f.css.map": "/framer-motion-practice/static/css/main.7ee9770f.css.map",
+    "main.96165df9.js.map": "/framer-motion-practice/static/js/main.96165df9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ee9770f.css",
+    "static/js/main.96165df9.js"
+  ]
+}
