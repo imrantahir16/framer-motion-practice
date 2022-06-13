@@ -5,7 +5,7 @@ import Input from "./components/Input";
 import useModal from "./hooks/useModal";
 import NotificationContainer from "./components/notification/NotificationContainer";
 import Notification from "./components/notification/Notification";
-import { add, remove } from "./Utility/arrays-utility";
+import { add } from "./Utility/arrays-utility";
 
 function App() {
   const { modalOpen, close, open } = useModal();
