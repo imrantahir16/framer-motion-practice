@@ -1,11 +1,23 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap);
 
 :root {
-  --dark: #101315;
-  --light: #eeeeee;
-  --gradient: linear-gradient(10deg, #ffaa00, #ff6a00);
-  --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
-  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+  --dark: hsl(204, 14%, 7%);
+  --light: hsl(0, 0%, 93%);
+  --gray: hsl(0, 0%, 40%);
+  --hue: 100;
+  /* --gradient: linear-gradient(
+    10deg,
+    hsl(var(--hue), 100%, 50%),
+    hsl(var(--hue), 100%, 65%)
+  ); */
+  --gradient: radial-gradient(
+    circle farthest-corner at 49.1% 71.8%,
+    hsl(var(--hue), 100%, 50%) 7.4%,
+    hsl(var(--hue), 100%, 65%) 90%
+  );
+  --primary-color: hsl(var(--hue), 100%, 50%);
+  --header-color: hsl(var(--hue), 100%, 50%);
+  --header-secondary-color: hsl(197, 100%, 50%);
   font-size: 0.9rem;
 }
 
@@ -30,7 +42,7 @@ main {
 }
 
 h1 {
-  color: #ff9d00;
+  color: var(--primary-color);
   font-size: 175%;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
@@ -69,11 +81,12 @@ h5 {
 }
 
 kbd {
-  background: #eee;
+  background: var(--light);
   border-radius: 3px;
-  border: 1px solid #b4b4b4;
-  box-shadow: 0 1px 1px #00000028, 0 2px 0 0 #ffffffc3 inset;
-  color: #131313;
+  border: 1px solid hsl(0, 0%, 71%);
+  box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.157),
+    0 2px 0 0 hsla(0, 0%, 100%, 0.765) inset;
+  color: hsl(0, 0%, 7%);
   display: inline-block;
   font-size: 0.85em;
   font-weight: 700;
@@ -103,7 +116,7 @@ button {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #000000e1;
+  background: hsla(0 0 0 / 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,24 +135,20 @@ button {
   align-items: center;
 }
 
-.orange-gradient {
+.modal-background {
   background: var(--gradient);
 }
 
-.green-gradient {
-  background: var(--gradient2);
-}
-
-.pink {
-  color: #c273ff;
+.header-color {
+  color: var(--header-color);
 }
 
 .gray {
-  color: #666666;
+  color: var(--gray);
 }
 
-.light-blue {
-  color: #00b7ff;
+.header-secondary {
+  color: var(--header-secondary-color);
 }
 
 .modal-button {
@@ -165,7 +174,7 @@ button {
   margin: 2rem auto 1rem 0;
   background: #101111;
   /* border: 1px dashed #9a9a9a99; */
-  color: #ffaa00;
+  color: var(--primary-color);
   border-radius: 4px;
   transition: background ease 400ms;
   box-shadow: 1px 1px 15px #03030399;
@@ -179,9 +188,9 @@ input {
   padding: 0.25rem 0.5rem;
   outline: none;
   background: var(--dark);
-  border: 2px solid #ff9d00;
+  border: 2px solid var(--primary-color);
   border-radius: 6px;
-  color: #ff9d00;
+  color: var(--primary-color);
   font-size: 1.25rem;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
@@ -247,7 +256,7 @@ li {
 .add-button {
   padding: 0 1rem;
   margin: 2rem auto auto 0;
-  background: var(--gradient2);
+  background: var(--gradient);
   color: var(--dark);
 }
 
@@ -287,7 +296,7 @@ li {
     width: calc(30vw);
   }
   h1 {
-    color: #ff9d00;
+    color: var(--primary-color);
     font-size: 250%;
   }
 }
